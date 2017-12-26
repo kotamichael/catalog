@@ -1,0 +1,51 @@
+<html>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+	<body>
+
+		<a style="float:left;" href="{{url_for('showCatalog')}}"><button>Home</button></a>
+
+
+		{%if 'username' not in session %}
+			<div style="float:right" align="right">
+				<a class="login" href="{{url_for('showLogin')}}"><button>Login</button></a>
+			</div>			
+		{% else %}
+			<div slyle="float:right" align="right">
+				<a class="login" href="{{url_for('gdisconnect')}}"><button>Logout</button></a>
+			</div>			
+		{% endif %}
+
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+
+			<ul>
+			{% for message in messages %}
+				<li><strong> {{ message }} </strong></li>
+			{% endfor %}
+			</ul>
+		{% endif %}
+		{% endwith %}
+
+		<h1>Categories</h1>
+
+		<a href="{{url_for('newCategory')}}"><button>Create a category</button></a>
+		</br></br>
+
+		{% for c in categories %}
+
+		<h3><a href="{{url_for('showCategory', category=c.name)}}">{{c.name}}</a></h3>
+
+		{% endfor %}
+	</br>
+
+		<a href="{{url_for('editCategory', category=category )}}"><button>Edit an existing category</button></a>
+	</br>
+	<br>
+		<a href="{{url_for('deleteCategory')}}"><button>Delete an existing category</button></a>
+	</body>
+	
+</head>
+</html>

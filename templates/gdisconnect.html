@@ -1,0 +1,35 @@
+<html>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+	<body>
+
+		<a style="float:left;" href="{{url_for('showCatalog')}}"><button>Home</button></a>
+
+
+		{%if 'username' not in session %}
+			<div style="float:right" align="right">
+				<a class="login" href="{{url_for('showLogin')}}"><button>Login</button></a>
+			</div>			
+		{% else %}
+			<div slyle="float:right" align="right">
+				<a class="login" href="{{url_for('gdisconnect')}}"><button>Logout</button></a>
+			</div>			
+		{% endif %}
+
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+
+			<ul>
+			{% for message in messages %}
+				<li><strong> {{ message }} </strong></li>
+			{% endfor %}
+			</ul>
+		{% endif %}
+		{% endwith %}
+
+	</body>
+	
+</head>
+</html>

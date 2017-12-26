@@ -1,0 +1,37 @@
+<html>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+	<body>
+
+		<h1>Delete a Category</h1>
+
+		<form action="{{url_for('deleteCategory')}}" method = 'post'>
+
+			<p>Which category would you like to delete?</p>
+				<select name='pickCategory'>
+					{% for c in categories %}
+
+					<option value='{{c.name}}'>{{c.name}}</option>
+					</br>
+
+					{% endfor %}
+				</select>
+			</br></br>
+
+			<input type='submit' value='Delete It!'>
+		</form>
+
+			<a href="{{url_for('showCatalog')}}"><button>Cancel</button></a>
+			<p><br></p>
+
+			<h2>Would you like to rename your category instead?</h2>
+			<br>
+			
+			<a href="{{url_for('editCategory')}}"><button>If so, click here!</button></a>
+
+	</body>
+	
+</head>
+</html>

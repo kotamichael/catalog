@@ -1,0 +1,23 @@
+<html>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+	<body>
+
+		<h1>Create your category!</h1>
+
+		<form action="/catalog/new/" method = 'post'>
+
+			<p>Name:</p>
+				<input type ='text' size='30' name='name' placeholder='Ex: Swimming'>
+
+			<input type='submit' value='Create!'>
+		</form>
+
+			<a href = "{{url_for('showCatalog')}}"><button>Cancel</button></a>
+
+	</body>
+	
+</head>
+</html>

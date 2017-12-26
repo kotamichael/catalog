@@ -1,0 +1,55 @@
+<html>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+	<body>
+
+		<h1>Edit your item!</h1>
+
+		<form action="{{url_for('editItem', category=item.category_type, item=item.name)}}" method = 'post'>
+			<h3>Category:</h3>
+			<p>Currently: {{item.category_type}}</p>
+
+			<p>Change to:
+
+				<select name='category'>
+					<option value=''></option>
+					{% for c in categories %}
+
+					<option value='{{c.name}}'>{{c.name}}</option>
+					</br>
+
+					{% endfor %}
+				</select>
+			</p>
+
+			<h3>Name:  </h3>
+			<p>Currently: {{item.name}}</p>
+				<p>Change to:
+					<input type ='text' size='30' name='name' placeholder='Ex: Cleat'>
+				</p>
+			</br>
+
+			<h3>Description:</h3>
+
+			<p>Currently: 
+				</br>
+				<textarea input type ='text' name='name' cols='50' rows='6' readonly>{{item.description}}</textarea></p>
+
+			<p>Change to:
+			</br>
+				<textarea input type ='text' name='description' cols='50' rows='10' placeholder='Ex: This is for kicking stuff.'></textarea>
+			</p>
+			<br>
+
+			<input type='submit' value='Make the change!'>
+
+		</form>
+		<a href = "{{url_for('showCategory', item=item, category=category)}}"><button> Cancel </button></a>
+
+	</body>
+	
+</head>
+</html>
+
