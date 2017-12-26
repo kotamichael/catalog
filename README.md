@@ -1,6 +1,6 @@
 # Item Catalog
 
-This project is designed for use primarily on a laptop or tablet, but it has been optimized for phone screens as well. If you're interested in the app's responsiveness, you can open developer tools in your browser and resize the screen, or simply open run the app from another machine.
+This project is designed in accordance to specifications issued by the Udacity team for the "Backend: Databases & Applications" segment of their [Full Stack Web Development Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004).  It is an online application that creates a database, allows a user to login using 3rd party authorization through Google, edit, delete and create new categories and/or items within those categories, and outised unauthorized users can safely view items and categories without being able to damage them.
 
 ## How To Use
 
