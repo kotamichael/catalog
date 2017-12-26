@@ -299,6 +299,7 @@ def newItem():
 def editItem(category, item):
 	if 'username' not in login_session:
 		return redirect('/login')
+	item = session.query(Items).filter_by(name = item).first()
 	owner = getUserInfo(item.user_id)
 	if owner.id != login_session['user_id']:
 		flash("You are not authorized to edit this item. \
