@@ -55,7 +55,9 @@ class Items(Base):
     time_created = Column(DateTime(timezone=True), server_default=func.now())
 
     user_id = Column(Integer, ForeignKey(Users.id))
-    owner = relationship(Users, cascade="all, delete-orphan")
+    owner = relationship(
+                        Users, single_parent=True,
+                        cascade="all, delete-orphan")
 
     category_type = Column(String(80), ForeignKey(Categories.name))
     category = relationship(Categories,
