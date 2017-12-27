@@ -33,7 +33,10 @@ class Categories(Base):
     id = Column(Integer, primary_key=True)
 
     user_id = Column(Integer, ForeignKey(Users.id))
-    creator = relationship(Users, cascade="all, delete-orphan")
+    creator = relationship(
+                        Users,
+                        single_parent=True,
+                        cascade="all, delete-orphan")
 
     @property
     def serialize(self):
@@ -55,7 +58,9 @@ class Items(Base):
     owner = relationship(Users, cascade="all, delete-orphan")
 
     category_type = Column(String(80), ForeignKey(Categories.name))
-    category = relationship(Categories, cascade="all, delete-orphan")
+    category = relationship(Categories,
+                            single_parent=True,
+                            cascade="all, delete-orphan")
 
     @property
     def serialize(self):
