@@ -1,6 +1,6 @@
 # Item Catalog
 
-This project is designed in accordance to specifications issued by the Udacity team for the "Backend: Databases & Applications" segment of their [Full Stack Web Development Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004).  It is an online application that creates a database, allows a user to login using 3rd party authorization through Google, edit, delete and create new categories and/or items within those categories, and outised unauthorized users can safely view items and categories without being able to damage them.
+This project is designed in accordance to specifications issued by the Udacity team for the "Backend: Databases & Applications" segment of their [Full Stack Web Development Nanodegree](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004).  It is an online application that creates a database, allows a user to login using 3rd party authorization through Google, edit, delete and create new categories and/or items within those categories, and outside unauthorized users can safely view items and categories without being able to damage them.
 
 ## How To Use
 
