@@ -12,5 +12,6 @@ oauth2client
 redis
 passlib
 flask-httpauth
+httplib2
 bleach
 requests
