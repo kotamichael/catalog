@@ -13,7 +13,6 @@ oauth2client
 redis
 passlib
 flask-httpauth
-psycopg2-binary
 bleach
 requests
 psycopg2==2.7.1
