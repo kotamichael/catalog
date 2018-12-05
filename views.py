@@ -110,7 +110,7 @@ def gconnect():
     answer = requests.get(userinfo_url, params=params)
 
     data = answer.json()
-    print (data)
+    console.log(data)
 
     login_session['username'] = data['name']
     login_session['picture'] = data['picture']
