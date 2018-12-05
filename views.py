@@ -8,6 +8,7 @@ from models import Base, Users, Categories, Items
 from flask import session as login_session
 import random
 import string
+import os
 
 from oauth2client.client import flow_from_clientsecrets
 from oauth2client.client import FlowExchangeError
