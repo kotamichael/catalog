@@ -123,7 +123,7 @@ def gconnect():
     login_session['user_id'] = user_id
 
     output = ''
-    output += '<h1>Welcome, '
+    output += '<h1 align="center">Welcome, '
     output += login_session['username']
     output += '!</h1>'
     output += '<img src="'
