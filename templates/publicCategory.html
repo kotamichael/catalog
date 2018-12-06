@@ -5,18 +5,20 @@
 
 	<body>
 
-		<a style="float:left;" href="{{url_for('showCatalog')}}"><button>Home</button></a>
+		<button><a style="float:left;" href="{{url_for('showCatalog')}}">Home</a></button>
 
 
 		{%if 'username' not in session %}
 			<div style="float:right" align="right">
-				<a class="login" href="{{url_for('showLogin')}}"><button>Login</button></a>
+				<button><a class="login" href="{{url_for('showLogin')}}">Login</a></button>
 			</div>			
 		{% else %}
 			<div slyle="float:right" align="right">
-				<a class="login" href="{{url_for('gdisconnect')}}"><button>Logout</button></a>
+				<button><a class="login" href="{{url_for('gdisconnect')}}">Logout</a></button>
 			</div>			
 		{% endif %}
+
+		<br>
 
 		<h1 align="center">{{ category.name }}</h1>
 

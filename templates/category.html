@@ -33,11 +33,6 @@
 		{% endif %}
 		{% endwith %}
 
-		{% if 'username' not in session %}
-			<br>
-			<h3>Please Log in to see the categories</h3>		
-		{% else %}
-
 		<a href = "{{url_for('newItem')}}">
 		<button>Create New Item</button></a>
 	</br>
@@ -48,8 +43,6 @@
 		<h3><a href="{{url_for('showItem', category=category, item = i.name)}}">{{i.name}}</a></h3>
 
 		{% endfor %}
-
-		{% endif %}
 
 	</body>
 

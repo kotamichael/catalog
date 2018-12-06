@@ -281,7 +281,7 @@ def showCategory(category):
     creator = getUserInfo(showCategory.user_id)
     items = session.query(Items).filter_by(category_type=showCategory.name)
     if 'username' not in login_session:
-        return render_template('publicCategory.html', category=showCategory)
+        return render_template('publicCategory.html', category=showCategory items=items)
     return render_template('category.html', category=showCategory, items=items)
 
 
