@@ -4,7 +4,7 @@ This project is designed in accordance to specifications issued by the Udacity t
 
 ## Visit the Site!
 
-[Item Catalog Site](www.item-catalog.com)
+[Item Catalog Site](http://www.item-catalog.com)
 
 This app is officially hosted on it's own domain. It isn't pretty, but you can see the functionality of the login/logout and database logic in action.
 
