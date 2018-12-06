@@ -19,10 +19,17 @@ h2 {
 h1 {
     border-bottom: 2px solid #eee;
     position: relative;
+    font-size: 4em;
+    padding-bottom: .25em;
 }
 
 h2 {
     font-size: 1.2em;
+}
+
+h3 {
+    font-size: 2em;
+    padding-bottom: 0;
 }
 
 p,
@@ -65,7 +72,7 @@ button:active {
 
 a {
     text-decoration: none;
-    color: #ffffcc;
+    color: #ffffff;
     font-size: .75em;
 }
 
