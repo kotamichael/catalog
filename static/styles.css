@@ -34,10 +34,10 @@ dt {
 button {
     display: inline-block;
     border: none;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     margin: 0;
     text-decoration: none;
-    background: #0069ed;
+    background: #ee473ae3;
     color: #ffffff;
     font-family: sans-serif;
     font-size: 1rem;
