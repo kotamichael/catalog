@@ -39,7 +39,6 @@ def showLogin():
                     for x in list(range(32)))
     login_session['state'] = state
     # return "The current session state is %s" % login_session['state']
-    console.log("The current session state is %s" % login_session['state'])
     return render_template('login.html', STATE=state)
 
 
@@ -49,7 +48,6 @@ def gconnect():
     if request.args.get('state') != login_session['state']:
         response = make_response(json.dumps('Invalid state parameter.'), 401)
         response.headers['Content-Type'] = 'application/json'
-        console.log(response)
         return response
     # Obtain authorization code
     code = request.data
