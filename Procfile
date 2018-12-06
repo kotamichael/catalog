@@ -1,2 +1,1 @@
-web: python models.py
-web: python views.py
+web: python models.py; python views.py
